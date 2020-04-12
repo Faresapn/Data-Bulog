@@ -104,7 +104,6 @@ public class CreateActivity extends AppCompatActivity {
                 int noTelp = Integer.parseInt(telfon.getEditText().getText().toString().trim());
                 String Status = String.valueOf(status.getSelectedItem().toString().trim());
                 String Ket = String.valueOf(keterangan.getSelectedItem().toString().trim());
-
                 RequestBody requestUser = RequestBody.create(Username, MediaType.parse("multipart/form-data"));
                 RequestBody requestName = RequestBody.create(nama, MediaType.parse("multipart/form-data"));
                 RequestBody requestToko = RequestBody.create(Namatoko, MediaType.parse("multipart/form-data"));
@@ -121,16 +120,8 @@ public class CreateActivity extends AppCompatActivity {
                 RequestBody requestNotelp = RequestBody.create(String.valueOf(noTelp), MediaType.parse("multipart/form-data"));
                 RequestBody requestStatus = RequestBody.create(status.getSelectedItem().toString().trim(), MediaType.parse("multipart/form-data"));
                 RequestBody requestKet = RequestBody.create(keterangan.getSelectedItem().toString().trim(), MediaType.parse("multipart/form-data"));
-
-
-
                 try {
-
-
                 Service service = Client.getClient().create(Service.class);
-
-
-
                     Call<CreateResponse> create = service.createData(requestKtp, requestNPWP, requestAlamat, requestProvinsi, requestKota
                             , requestKec, requestKel, requestUser, requestName, requestToko, requestEnt, requestDC, requestKate, requestNotelp, requestKet,requestStatus );
                     create.enqueue(new Callback<CreateResponse>() {
