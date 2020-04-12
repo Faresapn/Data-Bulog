@@ -19,6 +19,8 @@ import com.google.android.material.textfield.TextInputLayout;
 
 import java.util.jar.JarEntry;
 
+import okhttp3.MediaType;
+import okhttp3.RequestBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -48,7 +50,7 @@ public class CreateActivity extends AppCompatActivity {
         telfon = findViewById(R.id.notelp);
         keterangan = findViewById(R.id.spinner_aktif);
         status = findViewById(R.id.spinner_terima);
-        dataGet = getIntent().getParcelableExtra("id");
+        dataGet = getIntent().getParcelableExtra("data");
         //button
         ArrayAdapter<CharSequence> adapterBelt = ArrayAdapter.createFromResource(this,
                 R.array.aktif, R.layout.spinner_items);
@@ -102,6 +104,26 @@ public class CreateActivity extends AppCompatActivity {
                 int noTelp = Integer.parseInt(telfon.getEditText().getText().toString().trim());
                 String Status = String.valueOf(status.getSelectedItem().toString().trim());
                 String Ket = String.valueOf(keterangan.getSelectedItem().toString().trim());
+
+                RequestBody requestUser = RequestBody.create(Username, MediaType.parse("multipart/form-data"));
+                RequestBody requestName = RequestBody.create(nama, MediaType.parse("multipart/form-data"));
+                RequestBody requestToko = RequestBody.create(Namatoko, MediaType.parse("multipart/form-data"));
+                RequestBody requestAlamat = RequestBody.create(Alamat, MediaType.parse("multipart/form-data"));
+                RequestBody requestProvinsi = RequestBody.create(Provinsi, MediaType.parse("multipart/form-data"));
+                RequestBody requestKota = RequestBody.create(Kota, MediaType.parse("multipart/form-data"));
+                RequestBody requestKec = RequestBody.create(Kecamatan, MediaType.parse("multipart/form-data"));
+                RequestBody requestKel = RequestBody.create(Kelurahan, MediaType.parse("multipart/form-data"));
+                RequestBody requestEnt = RequestBody.create(Entitas, MediaType.parse("multipart/form-data"));
+                RequestBody requestKate = RequestBody.create(Kategori, MediaType.parse("multipart/form-data"));
+                RequestBody requestDC = RequestBody.create(Dc, MediaType.parse("multipart/form-data"));
+                RequestBody requestNPWP = RequestBody.create(NPWP, MediaType.parse("multipart/form-data"));
+                RequestBody requestKtp = RequestBody.create(KTP, MediaType.parse("multipart/form-data"));
+                RequestBody requestNotelp = RequestBody.create(String.valueOf(noTelp), MediaType.parse("multipart/form-data"));
+                RequestBody requestStatus = RequestBody.create(status.getSelectedItem().toString().trim(), MediaType.parse("multipart/form-data"));
+                RequestBody requestKet = RequestBody.create(keterangan.getSelectedItem().toString().trim(), MediaType.parse("multipart/form-data"));
+
+
+
                 try {
 
 
@@ -109,18 +131,20 @@ public class CreateActivity extends AppCompatActivity {
 
 
 
-                    Call<CreateResponse> create = service.createData(KTP, NPWP, Alamat, Provinsi, Kota, Kecamatan, Kelurahan, Username, nama, Namatoko, Entitas, Dc, Kategori, noTelp, Ket,Status );
+                    Call<CreateResponse> create = service.createData(requestKtp, requestNPWP, requestAlamat, requestProvinsi, requestKota
+                            , requestKec, requestKel, requestUser, requestName, requestToko, requestEnt, requestDC, requestKate, requestNotelp, requestKet,requestStatus );
                     create.enqueue(new Callback<CreateResponse>() {
                         @Override
                         public void onResponse(Call<CreateResponse> call, Response<CreateResponse> response) {
                             String kode = response.body().getStatusCode();
-                            if (kode.equals("0001")) {
+                            if (kode.equals("0016")) {
 
                                 Toast.makeText(CreateActivity.this, getString(R.string.msg_success), Toast.LENGTH_SHORT).show();
                                 finish();
                             } else {
 
                                 Toast.makeText(CreateActivity.this, getString(R.string.msg_error), Toast.LENGTH_SHORT).show();
+                                Log.d("kode:",kode);
 
                             }
                             finish();

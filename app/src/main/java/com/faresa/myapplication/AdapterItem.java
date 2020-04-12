@@ -60,10 +60,11 @@ public class AdapterItem extends RecyclerView.Adapter<AdapterItem.ViewHolder> {
                     public boolean onMenuItemClick(MenuItem item) {
                         switch (item.getItemId()) {
                             case R.id.edit:
-                                Intent intent = new Intent(mainActivity.getApplicationContext(), EditActivity.class);
+                                Intent intent = new Intent(mainActivity, EditActivity.class);
                                 intent.putExtra("id", String.valueOf(dataGets.get(position).getBulogId()));
                                 intent.putExtra("name", dataGets.get(position).getUsername());
-                                mainActivity.getApplicationContext().startActivity(intent);
+                                intent.putExtra("data", dataGets.get(position));
+                                mainActivity.startActivity(intent);
                                 return true;
                             case R.id.delete:
                                 Service service = Client.getClient().create(Service.class);
@@ -73,7 +74,7 @@ public class AdapterItem extends RecyclerView.Adapter<AdapterItem.ViewHolder> {
                                     public void onResponse(Call<Delete> call, Response<Delete> response) {
                                         String kode = response.body().getStatusCode();
                                         if (kode.equals("0001")) {
-                                            Toast.makeText(mainActivity.getApplicationContext(), view.getContext().getString(R.string.msg_success), Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(mainActivity, view.getContext().getString(R.string.msg_success), Toast.LENGTH_SHORT).show();
                                             dataGets.remove(dataGets.get(position));
                                             notifyDataSetChanged();
                                             if (dataGets.size() == 0) {

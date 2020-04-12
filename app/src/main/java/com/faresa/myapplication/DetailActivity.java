@@ -3,6 +3,7 @@ package com.faresa.myapplication;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -46,6 +47,7 @@ public class DetailActivity extends AppCompatActivity {
         ktp = findViewById(R.id.Ktp);
         String KtP = String.valueOf(item.getKtp());
         ktp.setText(KtP);
+        Log.d("kodee", String.valueOf(item.getKtp()));
 
         npwp = findViewById(R.id.NPWP);
         String NP = item.getNpwp();

@@ -17,7 +17,7 @@ public class DataItem implements Parcelable {
 	private String kota;
 
 	@SerializedName("ktp")
-	private Object ktp;
+	private String ktp;
 
 	@SerializedName("npwp")
 	private String npwp;
@@ -64,10 +64,12 @@ public class DataItem implements Parcelable {
 	@SerializedName("status")
 	private String status;
 
+
 	protected DataItem(Parcel in) {
 		provinsi = in.readString();
 		keterangan = in.readString();
 		kota = in.readString();
+		ktp = in.readString();
 		npwp = in.readString();
 		toko = in.readString();
 		createdAt = in.readString();
@@ -121,11 +123,11 @@ public class DataItem implements Parcelable {
 		return kota;
 	}
 
-	public void setKtp(Object ktp){
+	public void setKtp(String ktp){
 		this.ktp = ktp;
 	}
 
-	public Object getKtp(){
+	public String getKtp(){
 		return ktp;
 	}
 
@@ -275,6 +277,7 @@ public class DataItem implements Parcelable {
 			"}";
 		}
 
+
 	@Override
 	public int describeContents() {
 		return 0;
@@ -285,6 +288,7 @@ public class DataItem implements Parcelable {
 		dest.writeString(provinsi);
 		dest.writeString(keterangan);
 		dest.writeString(kota);
+		dest.writeString(ktp);
 		dest.writeString(npwp);
 		dest.writeString(toko);
 		dest.writeString(createdAt);

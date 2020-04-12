@@ -23,6 +23,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:background="#e5e5e5"
+        android:layout_marginBottom="10dp"
         android:layout_height="match_parent">
 
         <LinearLayout
@@ -35,6 +36,7 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:id="@+id/username"
                 android:layout_marginTop="20dp"
                 app:layout_constraintTop_toBottomOf="@+id/textView"
                 tools:layout_editor_absoluteX="16dp">
@@ -52,6 +54,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
+                android:id="@+id/name"
                 app:layout_constraintTop_toBottomOf="@+id/textView"
                 tools:layout_editor_absoluteX="16dp">
 
@@ -68,6 +71,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
+                android:id="@+id/toko"
                 app:layout_constraintTop_toBottomOf="@+id/textView"
                 tools:layout_editor_absoluteX="16dp">
 
@@ -84,6 +88,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
+                android:id="@+id/entitas"
                 app:layout_constraintTop_toBottomOf="@+id/textView"
                 tools:layout_editor_absoluteX="16dp">
 
@@ -100,6 +105,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
+                android:id="@+id/dc"
                 app:layout_constraintTop_toBottomOf="@+id/textView"
                 tools:layout_editor_absoluteX="16dp">
 
@@ -116,6 +122,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
+                android:id="@+id/kategori"
                 app:layout_constraintTop_toBottomOf="@+id/textView"
                 tools:layout_editor_absoluteX="16dp">
 
@@ -131,6 +138,7 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:id="@+id/ktp"
                 android:layout_marginTop="20dp"
                 app:layout_constraintTop_toBottomOf="@+id/textView"
                 tools:layout_editor_absoluteX="16dp">
@@ -148,6 +156,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
+                android:id="@+id/npwp"
                 app:layout_constraintTop_toBottomOf="@+id/textView"
                 tools:layout_editor_absoluteX="16dp">
 
@@ -164,6 +173,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
+                android:id="@+id/alamat"
                 app:layout_constraintTop_toBottomOf="@+id/textView"
                 tools:layout_editor_absoluteX="16dp">
 
@@ -179,6 +189,7 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:id="@+id/provinsi"
                 android:layout_marginTop="20dp"
                 app:layout_constraintTop_toBottomOf="@+id/textView"
                 tools:layout_editor_absoluteX="16dp">
@@ -196,6 +207,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
+                android:id="@+id/kota"
                 app:layout_constraintTop_toBottomOf="@+id/textView"
                 tools:layout_editor_absoluteX="16dp">
 
@@ -212,6 +224,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
+                android:id="@+id/kecamatan"
                 app:layout_constraintTop_toBottomOf="@+id/textView"
                 tools:layout_editor_absoluteX="16dp">
 
@@ -228,6 +241,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
+                android:id="@+id/kelurahan"
                 app:layout_constraintTop_toBottomOf="@+id/textView"
                 tools:layout_editor_absoluteX="16dp">
 
@@ -242,6 +256,7 @@
             </com.google.android.material.textfield.TextInputLayout>
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
+                android:id="@+id/notelp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 app:layout_constraintTop_toBottomOf="@+id/textView"
@@ -256,61 +271,69 @@
                     android:maxLines="1" />
 
             </com.google.android.material.textfield.TextInputLayout>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Keterangan">
-
-            </TextView>
             <LinearLayout
                 android:layout_width="match_parent"
-                android:orientation="horizontal"
-
+                android:orientation="vertical"
                 android:layout_height="wrap_content">
-                <androidx.appcompat.widget.AppCompatRadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_margin="6dp"
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Aktif">
+                    android:layout_weight="1"
 
-                </androidx.appcompat.widget.AppCompatRadioButton>
-                <androidx.appcompat.widget.AppCompatRadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="6dp"
-                    android:text="Tidak Aktif">
+                    android:text="Keterangan"
+                    android:textSize="16sp">
 
-                </androidx.appcompat.widget.AppCompatRadioButton>
+                </TextView>
+                <Spinner
+                    android:id="@+id/spinner_aktif"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    >
+
+                </Spinner>
             </LinearLayout>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="status">
-
-            </TextView>
             <LinearLayout
                 android:layout_width="match_parent"
-                android:orientation="horizontal"
-                android:layout_height="wrap_content">
-                <androidx.appcompat.widget.AppCompatRadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_margin="6dp"
-                    android:layout_height="wrap_content"
-                    android:text="Diterima">
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-                </androidx.appcompat.widget.AppCompatRadioButton>
-                <androidx.appcompat.widget.AppCompatRadioButton
-                    android:layout_width="wrap_content"
+                <TextView
+                    android:id="@+id/textView41"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="6dp"
-                    android:text="Tidak Diterima">
 
-                </androidx.appcompat.widget.AppCompatRadioButton>
+                    android:text="Status"
+                    android:textSize="16sp">
+
+                </TextView>
+                <Spinner
+                    android:id="@+id/spinner_terima"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    >
+
+                </Spinner>
 
             </LinearLayout>
             <Button
                 android:layout_width="match_parent"
-                android:text="SAVE"
+                android:id="@+id/save"
+                android:layout_margin="16dp"
+                android:text="EDIT"
+                android:background="#009688"
+                android:textColor="#fff"
+                android:layout_height="wrap_content">
+
+            </Button>
+            <Button
+                android:layout_width="match_parent"
+                android:id="@+id/cancel"
+                android:layout_margin="16dp"
+                android:textColor="#fff"
+                android:text="Cancel"
+                android:background="#DA0B0B"
                 android:layout_height="wrap_content">
 
             </Button>
@@ -318,5 +341,6 @@
         </LinearLayout>
 
     </ScrollView>
+
 
 </LinearLayout>

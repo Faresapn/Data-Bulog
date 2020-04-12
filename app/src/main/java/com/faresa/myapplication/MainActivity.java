@@ -47,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
         adapterItem.setDataGets(data);
         recyclerView = findViewById(R.id.rv_);
         null_layout = findViewById(R.id.null_image);
+
         initRV();
         pb = findViewById(R.id.pb);
         getData();
@@ -70,6 +71,7 @@ public class MainActivity extends AppCompatActivity {
 
                     try {
                         data.clear();
+
                         data.addAll(data1.getData());
                         recyclerView.setAdapter(adapterItem);
                         adapterItem.notifyDataSetChanged();
