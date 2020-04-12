@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">BULOG</string>
+    <string name="msg_success">Berhasil</string>
+    <string name="msg_error">Gagal</string>
+    <string name="ekspor">https://lit-tundra-82709.herokuapp.com/api/v1/export</string>
+    <string-array name="aktif">
+    <item>Aktif</item>
+    <item>Tidak Aktif</item>
+    </string-array>
+    <string-array name="terima">
+        <item>Diterima</item>
+        <item>Tidak Diterima</item>
+    </string-array>
 </resources>

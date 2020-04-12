@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-   card_view:cardElevation="3dp"
+
     android:layout_marginLeft="8dp"
     android:layout_marginTop="4dp"
     android:layout_marginRight="8dp"
     android:layout_marginBottom="4dp"
     android:elevation="8dp"
-    card_view:cardCornerRadius="16dp">
+    card_view:cardCornerRadius="10dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -50,7 +50,7 @@
             tools:text="Information Technology" />
 
         <TextView
-            android:id="@+id/laptop_more"
+            android:id="@+id/more"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginEnd="8dp"

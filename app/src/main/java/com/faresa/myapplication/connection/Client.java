@@ -6,7 +6,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class Client {
-    private static final String BASE_URL_API = "https://pkl-api.adsmall.id/api/v1/";
+    private static final String BASE_URL_API = "https://lit-tundra-82709.herokuapp.com/api/v1/";
 
     private static Retrofit retrofit = null;
 
