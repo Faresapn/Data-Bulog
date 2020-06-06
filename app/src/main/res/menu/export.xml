@@ -6,4 +6,9 @@
         android:orderInCategory="100"
         android:title="export"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/barang"
+        android:orderInCategory="100"
+        android:title="data barang"
+        app:showAsAction="never" />
 </menu>

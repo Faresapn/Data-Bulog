@@ -107,6 +107,10 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.ekspor)));
                 startActivity(intent);
                 return true;
+            case R.id.barang:
+                Intent intent2 = new Intent(MainActivity.this,DataBarangActivity.class);
+                startActivity(intent2);
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
