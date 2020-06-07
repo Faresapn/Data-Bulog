@@ -5,6 +5,7 @@ package com.faresa.myapplication.connection;
 import com.faresa.myapplication.pojo.GetData;
 import com.faresa.myapplication.pojo.create.CreateResponse;
 import com.faresa.myapplication.pojo.delete.Delete;
+import com.faresa.myapplication.pojo.getbarang.BarangResponse;
 import com.faresa.myapplication.pojo.update.UpdateResponse;
 
 import okhttp3.RequestBody;
@@ -70,6 +71,7 @@ public interface Service {
     Call<Delete> delete(@Path("id") int id);
 
 
-
+    @GET("barang/data")
+    Call<BarangResponse> getBarang();
 
 }

@@ -13,7 +13,9 @@
         android:roundIcon="@mipmap/ic_launcher_new_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".DataBarangActivity"></activity>
+        <activity android:name=".DetailBarang"></activity>
+        <activity android:name=".CheckoutActivity" />
+        <activity android:name=".DataBarangActivity" />
         <activity android:name=".DetailActivity" />
         <activity android:name=".EditActivity" />
         <activity android:name=".CreateActivity" />

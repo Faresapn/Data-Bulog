@@ -7,6 +7,38 @@ import com.google.gson.annotations.SerializedName;
 
 public class GetBarang implements Parcelable {
 
+	public void setKeterangan(String keterangan) {
+		this.keterangan = keterangan;
+	}
+
+	public void setNama(String nama) {
+		this.nama = nama;
+	}
+
+	public void setHarga(int harga) {
+		this.harga = harga;
+	}
+
+	public void setUpdatedAt(String updatedAt) {
+		this.updatedAt = updatedAt;
+	}
+
+	public void setCreatedAt(String createdAt) {
+		this.createdAt = createdAt;
+	}
+
+	public void setStok(int stok) {
+		this.stok = stok;
+	}
+
+	public void setBarangId(int barangId) {
+		this.barangId = barangId;
+	}
+
+	public void setKodeProduk(int kodeProduk) {
+		this.kodeProduk = kodeProduk;
+	}
+
 	@SerializedName("keterangan")
 	private String keterangan;
 
@@ -30,7 +62,8 @@ public class GetBarang implements Parcelable {
 
 	@SerializedName("kode_produk")
 	private int kodeProduk;
-
+	public GetBarang() {
+	}
 	protected GetBarang(Parcel in) {
 		this.keterangan = in.readString();
 		this.nama = in.readString();

@@ -3,7 +3,7 @@ package com.faresa.myapplication.pojo.getbarang;
 import java.util.List;
 import com.google.gson.annotations.SerializedName;
 
-public class Response{
+public class BarangResponse {
 
 	@SerializedName("msg")
 	private String msg;
