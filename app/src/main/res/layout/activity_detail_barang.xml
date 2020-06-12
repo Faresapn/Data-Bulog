@@ -97,52 +97,7 @@
             android:layout_gravity="center"
             android:gravity="center"
             android:layout_height="wrap_content">
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"
 
-
-                >
-
-                <TextView
-                    android:id="@+id/minus"
-                    android:layout_width="25dp"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bg_minus"
-                    android:text="-"
-                    android:textAlignment="center"
-                    android:textColor="#000"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/jumlah"
-                    android:layout_width="45dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="3dp"
-                    android:layout_marginRight="3dp"
-                    android:background="@drawable/bg_jumlah"
-                    android:ems="10"
-                    android:inputType="number"
-                    android:text="0"
-                    android:textAlignment="center"
-                    android:textColor="@color/colorPrimary"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/plus"
-                    android:layout_width="25dp"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bg_plus"
-                    android:text="+"
-                    android:textAlignment="center"
-                    android:textColor="#fff"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-            </LinearLayout>
             <com.github.ivbaranov.mfb.MaterialFavoriteButton
                 android:layout_width="30dp"
                 android:layout_height="30dp"

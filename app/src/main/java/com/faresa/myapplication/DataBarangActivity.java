@@ -40,7 +40,14 @@ public class DataBarangActivity extends AppCompatActivity {
         adapterBarang.setBarangs(data);
         recyclerView = findViewById(R.id.rv_data);
         null_layout = findViewById(R.id.null_image);
-
+FloatingActionButton fv = findViewById(R.id.floatingActionButton);
+fv.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        Intent intent2 = new Intent(DataBarangActivity.this,CheckoutActivity.class);
+        startActivity(intent2);
+    }
+});
         initRV();
         pb = findViewById(R.id.pb);
         getData();
